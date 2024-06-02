@@ -9,4 +9,4 @@ jobs:
        run: echo "hello $MY_ACTION $MY_ACTOR"
        env:
          MY_ACTION: ${{  github.action  }}
-         MY_ACTOR: $github.actor
+         MY_ACTOR: ${{ github.actor }}
