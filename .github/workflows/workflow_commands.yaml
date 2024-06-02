@@ -1,17 +1,16 @@
 name: "workflow commands"
+on: [push]
 
-  on: push
-
-  jobs: 
-    workflow-commands:
-      steps:
-        - name: "group logging"
-          run: |
-            echo "::group:: My Group Message"
-            echo "message1"
-            echo "message2"
-            echo "::endgroup::"
-        - name: "add variable"
-          run: echo "MY_VAL=JEFFERSON" >> GITHUB_ENV
-        - name: "retreive variable"
-          run: echo "$MY_VAL"
+jobs: 
+  workflow_commands:
+    steps:
+      - name: "group logging"
+        run: |
+          echo "::group:: My Group Message"
+          echo "message1"
+          echo "message2"
+          echo "::endgroup::"
+      - name: "add variable"
+        run: echo "MY_VAL=JEFFERSON" >> GITHUB_ENV
+      - name: "retreive variable"
+        run: echo "$MY_VAL"
