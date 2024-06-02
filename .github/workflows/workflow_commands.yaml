@@ -14,4 +14,4 @@ jobs:
       - name: "add variable"
         run: echo "MY_VAL=JEFFERSON" >> GITHUB_ENV
       - name: "retreive variable"
-        run: echo "$MY_VAL"
+        run: echo $MY_VAL
