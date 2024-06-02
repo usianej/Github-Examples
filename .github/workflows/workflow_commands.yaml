@@ -3,6 +3,7 @@ on: [push]
 
 jobs: 
   workflow_commands:
+    runs-on: ubuntu-latest
     steps:
       - name: "group logging"
         run: |
